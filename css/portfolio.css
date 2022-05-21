@@ -203,7 +203,7 @@ nav {
 }
 
 .list-cards-item:hover .text-description,
-.list-cards-item:focus .text-description{
+.list-cards-item:focus .text-description {
   transform: translateY(0);
   transition: transform var(--duration) var(--timing-function);
 }
@@ -240,32 +240,32 @@ nav {
   transition: transform var(--duration) var(--timing-function);
 }
 
-.text-description{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 63px 24px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5; 
-    letter-spacing: 0.03em; 
-    color: #FFFFFF;
-    background-color: rgba(33, 150, 243, 0.9);;
-    transform: translateY(101%);
-    transition: transform var(--duration) var(--timing-function);
+.text-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  transition: transform var(--duration) var(--timing-function);
 }
 
-.image{
+.image {
   display: block;
   width: auto;
   height: 100%;
 }
 
-.description{
+.description {
   position: relative;
   overflow: hidden;
 }
