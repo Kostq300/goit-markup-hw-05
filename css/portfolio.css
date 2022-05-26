@@ -64,8 +64,6 @@ img {
   color: var(--accent-color);
 }
 
-
-
 .site-nav-list {
   font-weight: 500;
   font-size: 14px;
@@ -81,6 +79,7 @@ img {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color var(--duration) var(--timing-function);
 }
 
 .active-page::after {
@@ -105,13 +104,11 @@ img {
   height: 4px;
   background-color: #2196f3;
   border-radius: 2px;
-  transition: transform var(--duration) var(--timing-function);
 }
 
 .site-nav-link:hover,
 .site-nav-link:focus {
   color: var(--accent-color);
-  transition: transform var(--duration) var(--timing-function);
 }
 
 .site-nav-item {
@@ -161,12 +158,12 @@ nav {
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
+  transition: color var(--duration) var(--timing-function);
 }
 
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
-  transition: transform var(--duration) var(--timing-function);
 }
 
 .contacts-icon {
@@ -185,6 +182,9 @@ nav {
   padding: 6px 22px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color var(--duration) var(--timing-function),
+    color var(--duration) var(--timing-function),
+    box-shadow var(--duration) var(--timing-function);
 }
 
 .btn:hover,
@@ -193,7 +193,6 @@ nav {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: transform var(--duration) var(--timing-function);
 }
 
 .list-btn {
@@ -230,12 +229,6 @@ nav {
   margin-bottom: 30px;
 }
 
-.list-cards-item:hover .text-description,
-.list-cards-item:focus .text-description {
-  transform: translateY(0);
-  transition: transform var(--duration) var(--timing-function);
-}
-
 .list-cards-item:nth-child(3n) {
   margin-right: 0;
 }
@@ -259,13 +252,18 @@ nav {
 
 .link-cards {
   display: block;
+  transition: box-shadow var(--duration) var(--timing-function);
 }
 
 .link-cards:hover,
 .link-cards:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: transform var(--duration) var(--timing-function);
+}
+
+.link-cards:hover .text-description,
+.link-cards:focus .text-description {
+  transform: translateY(0);
 }
 
 .text-description {
@@ -391,10 +389,9 @@ address {
   fill: var(--primary-white-color);
 }
 
-.soc-list-item:hover,
-.soc-list-item:focus {
+.soc-link:hover,
+.soc-link:focus {
   background-color: var(--accent-color);
-  transition: transform var(--duration) var(--timing-function);
 }
 
 .soc-link {
@@ -403,4 +400,7 @@ address {
   align-items: center;
   width: 100%;
   height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  transition: background-color var(--duration) var(--timing-function);
 }
