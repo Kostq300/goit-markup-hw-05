@@ -12,14 +12,15 @@
 <script>
 function openLinkInExternalBrowser() {
     var url = "https://www.example.com";
-    
-    // Определение типа устройства
-    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
-    var isiOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
 
-    if (isAndroid || isiOS) {
-        // Открыть во внешнем браузере для Android и iOS
-        window.open(url, '_system');
+    // Проверка на мобильные устройства с использованием регулярных выражений
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        // Открыть ссылку во внешнем браузере для мобильных устройств
+        window.location.href = "intent://" + url + "#Intent;package=com.android.chrome;scheme=http;end";
+        // Для iOS можно использовать следующую строку
+        // window.location.href = "http://maps.apple.com/?q=" + encodeURIComponent(url);
     } else {
         // Открыть в новой вкладке для других устройств
         window.open(url, '_blank');
